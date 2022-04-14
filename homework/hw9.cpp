@@ -82,8 +82,8 @@ void partition(int first, int last, int pivot, int arr[])
             last--;
 
         swap(arr[first], arr[last]);
-        /* no need to inc/dec f & l because that will be done by the
-        inner while loops in the next iteration */
+        /* no need to inc/dec f & l because that will be done
+           by the inner while loops in the next iteration */
     }
 }
 
@@ -108,3 +108,14 @@ void swap(int &a, int &b)
     a = b;
     b = temp;
 }
+
+/*  Sample Execution
+
+Original Array: 
+[10, 0, 2, 7, 5, 0, 4, 0, 9, 1]
+first:   6
+ last:   9
+pivot:   2
+Partitioned Array: 
+[10, 0, 2, 7, 5, 0, 1, 0, 9, 4]
+*/
