@@ -11,5 +11,5 @@ using namespace std;
 
 int main()
 {
-    cout << "deez" << endl;
+    cout << "deez n" << endl;
 }
