@@ -1,0 +1,221 @@
+Grades and Grading Rules
+========================
+
+   - The grading rules below will take effect on Monday,
+     02/21/2022. However, you should get into a habit of
+     applying them as sson as possible.
+
+   - Assignment submission rules listed below are in eefect
+     as of now.	
+
+   - Your code must be neat and it must work. Minimal
+     partial credit, if any, will be awarded for a
+     nonworking code.
+
+   - No line in your program could exceed 60-65 columns
+
+   - Beginning of your program must contain at least the
+     first four lines of the following comment lines. The
+     colons in these lines must be aligned as shown below:
+
+     //        Name: John Doe
+     //  Assignment: hw1
+     //    Due Date: 02/20/2021
+     // Description: Output three numbers
+     //        File: hw1.cpp
+
+   - Missing/misaligned initial comments is not allowed
+
+   - Your assignment must contain the sample execution of
+     your code enclosed as block comments at the very end of
+     your program ( Block comments start with the line
+     containing only /* and end with the line containing
+     only */. All lines between them are treated as
+     comments. These lines should contain the copied sample
+     run of your program )
+
+   - Each indentation level must be identical to other
+     indentation levels. Using 3-4 spaces for each
+     indentation level is a suitable value.
+     
+   - Using Tab keys to achieve indentation is unacceptable.
+
+   - Incorrect indentation or lack of it is not allowed.
+
+   - Empty lines in your program should be used but only to
+     separate distinct pieces of code. Namely, variable
+     declarations should be separated by an empty line from
+     the program statements, program statements should be
+     separated by an empty line from the output statements,
+     and the return 0 statement should also be separated
+     from the output statements by an empty line.
+
+   - Multiple variables used in the same declaration line
+     should be separated by a space following the comma.
+
+   - Files should be named with small letters, digits and
+     underscores lub hyphens. Spaces and capital letters in
+     any file names are not allowed. Hyphens are not allowed
+     in indentifiers used in a program.
+
+   - All function declarations must be present before
+
+        using namespace std;
+
+     statement in your program.
+
+   - Function implementations must be placed after the main
+     program
+     
+   - In all future assignments any redundancy present in
+     your code will cause point deductions. Typical
+     redundancies are:
+
+        - unnecessary braces
+        - unnecessary variables
+        - repeated same statements
+        - repeated computations
+
+   - Multiple return statements are not allowed ( only one
+     return statement in a program is allowed )
+
+   - Capital letters in variable and file names are not
+     allowed
+
+   - Spaces in file names are not allowed
+
+   - All left and the corresponding right braces must be in
+     the same columns.
+
+   - Braces placed at the end of the line containing keyword
+     are not allowed ( braces must be on separate lines by
+     themselves )
+   
+   - Braces followed by C++ statements ( on the same line )
+     are not allowed
+
+   - Braces not directly below the first character of the
+     keyword they are associated with are not allowed
+
+   - Using exit()'s to end programs is not allowed
+   
+   - Placing 'else' and 'if' on the same line is not allowed
+
+   - Declarations of variables in a middle of a program is
+     not allowed
+
+   - Unnecessary assignment of initial values to variables
+     must be avoided
+
+   - Each operator used in your program must be surronded by
+     a space, on both sides of it.
+
+   - Using the statements/material not yet covered in the
+     class is not allowed
+
+   - Self-documenting code is required ( names of
+     variables/function used in the program must reflect
+     their purpose )
+
+   - Multiple tasks performed by one function is not allowed
+   
+   - Numerical output from your program must be clearly
+     defined and numbers formatted.  Real numbers must be
+     aligned by the decimal point.  Integers must be right
+     justified and aligned with the integer part of real
+     numbers if both types are output. In most cases when
+     mupltiple numbers are output, one number per line
+     should be used.
+
+   - Numerical output of your program should be separated by
+     empty lines from the operating system prompts ( at the
+     beginning and at the end )
+
+
+Assignment Submission Rules
+===========================
+	
+   - All assignments must be submitted by their due date 
+
+   - All assignments must be attached as text files ( .cpp
+     files are text files ). Your .cpp file is the best
+     choice. Pdf files and screenshots of your assignment
+     will not be graded and it will be treated as a
+     non-submission.
+
+   - Submission of your assignment in the body of your
+     assignment email is not allowed.
+
+   - Only one email with your assignment is allowed.
+
+   - Only one email address to which you send the
+     assignment, namely, ts@dsm.fordham.edu, is allowed.
+
+   - Multiple submissions of the same assignment is not
+     allowed. Only the first submission will be graded.
+
+   - In your email you must use the correct subject line,
+     i.e.,
+          Name - course number - assignment
+     For example
+          John Doe - CISC 1600 - homework 1
+             
+     Homework numbers must not be mixed with the lab
+     assignments and vice versa. Submit only one assignment
+     in one assignment email.
+
+   - For the last time I am including below the correctly
+     structured C++ program as an example of what is
+     expected.
+
+   - Below is an example of program that follows the above
+     rules. Please follow this example in your future
+     programs to avoid point deductions. This program does
+     not have a separate computation section to avoid
+     redundancies. If such program design is possible it
+     should be used. 
+
+//        Name: John Doe
+//  Assignment: hw2
+//    Due Date: 02/20/2021
+// Description: testing function cube(n)
+//        File: hw2.cpp
+
+#include <iostream>
+#include <iomanip>
+
+int cube( int x );   // function declaration
+
+using namespace std;
+                                  
+int main()
+{
+   int number;
+   
+   cout << "Enter a number and press <Enter> ";
+   cin >> number;
+   
+   cout << "The cube of " << number << " is ";
+   cout << cube( number ) << endl;
+   
+   return 0;
+}
+
+// function implementation
+
+int cube( int x )
+{
+   return x*x*x;
+}
+
+/*
+Sample output:
+==============
+
+/u/dsm/ts/class/online[ts@kopernik online]$  lab2
+
+Enter a number and press <Enter> 3
+The cube of 3 is 27
+
+/u/dsm/ts/class/online[ts@kopernik online]$ 
+*/
