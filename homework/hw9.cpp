@@ -18,7 +18,7 @@ unsigned int seed = time(0);
 const int SIZE = 10;
 
 void fill_array(int a[]);
-void print_array(int a[]);
+void print_array(const int a[]);
 void partition(int first, int last, int pivot, int arr[]);
 double random(unsigned int& seed);
 void swap(int &a, int &b);
@@ -58,7 +58,7 @@ void fill_array(int a[])
         a[i] = int((SIZE + 1) * random(seed));
 }
 
-void print_array(int a[])
+void print_array(const int a[])
 {
     cout << '[';
     for (int i = 0; i < SIZE; i++)
