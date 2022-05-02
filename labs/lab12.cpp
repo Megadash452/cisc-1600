@@ -39,10 +39,11 @@ void fill_2d_array(int arr[][COL_SIZE])
         for (int col = 0; col < COL_SIZE; col++)
             if (row < col)
                 arr[row][col] = int(5 * random(seed)); // 0 <= x < 5
-            else if (row > col)
-                arr[row][col] = int(-10 + 5 * random(seed)); // -10 < x <= -5
-            else // row == col
-                arr[row][col] = 0;
+            else
+                if (row > col)
+                    arr[row][col] = int(-10 + 5 * random(seed)); // -10 < x <= -5
+                else // row == col
+                    arr[row][col] = 0;
 }
 
 void print_2d_array(const int arr[][COL_SIZE])
