@@ -81,10 +81,8 @@ void r_combinations(int r, int arr[])
                     // Step 3:
                     for (int j = i + 1; j <= r; j++) // TODO: use while??
                         arr[j - 1] = arr[j - 2] + 1;
-
                     found = true;
                 }
-
             i--;
         }
     }
