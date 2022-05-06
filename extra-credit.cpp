@@ -17,7 +17,7 @@ using namespace std;
 
 int main()
 {
-    int a[SIZE], r = 4;
+    int a[SIZE], r = 3;
 
     fill_array(a);
 
@@ -51,9 +51,7 @@ void r_combinations(int r, int arr[])
     bool done = false, found;
     int i;
 
-    /* i - 1 cannot be larger than Size - 1
-       i     cannot be larger than Size
-       r     cannot be larger than Size */
+    // r cannot be larger than Size
     assert(r <= SIZE);
 
     while (!done)
@@ -65,22 +63,22 @@ void r_combinations(int r, int arr[])
 
         /* Iterate backwards to find _last_ element that
            meets criteria */
-        i = r;
-        while (i >= 0 && !found)
+        i = r - 1;
+        while (i >= -1 && !found)
         {
             // Step 1:
             // Stop because element does not exist
-            if (i - 1 < 0)
+            if (i < 0)
                 done = true;
             else
                 // n - r + 1 != a_i; n is last element in array
-                if (arr[SIZE - 1] - r + i != arr[i - 1])
+                if (arr[SIZE - 1] - r + i + 1 != arr[i])
                 {
                     // Step 2:
-                    arr[i - 1] += 1;
+                    arr[i] += 1;
                     // Step 3:
-                    for (int j = i + 1; j <= r; j++) // TODO: use while??
-                        arr[j - 1] = arr[j - 2] + 1;
+                    for (int j = i + 1; j <= r; j++)
+                        arr[j] = arr[j - 1] + 1;
                     found = true;
                 }
             i--;
