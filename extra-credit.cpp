@@ -2,7 +2,8 @@
          Name: Martin Molina
    Assignment: extra-credit
          Date: 5/2/2022
-  Description: 
+  Description: List the 3-combinations of { 1, 2, 3, 4, 5 }
+               in lexographic order
 */
 #include <iostream>
 #include <assert.h>
